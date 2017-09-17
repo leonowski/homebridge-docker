@@ -20,6 +20,11 @@ RUN apt-get install -y locales
 RUN apt-get install -y curl wget git python build-essential make g++ libavahi-compat-libdnssd-dev libkrb5-dev vim net-tools nano
 RUN alias ll='ls -alG'
 
+# Update NPM and nodejs to .7
+RUN curl -sL https://deb.nodesource.com/setup_8.x | -E bash -
+RUN sudo apt-get install -y nodejs
+RUN npm install npm@latest -g
+
 ##################################################
 # Install homebridge                             #
 ##################################################
