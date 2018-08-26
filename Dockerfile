@@ -24,6 +24,7 @@ RUN alias ll='ls -alG'
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get install -y nodejs
 RUN npm install npm@latest -g
+RUN npm install readable-stream@2.3.0 -g
 
 ##################################################
 # Install homebridge                             #
